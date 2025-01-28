@@ -1,0 +1,21 @@
+version: '1.0'
+services:
+  backend:
+    container_name: backend
+    env_file:
+      - backend/.env
+    build:
+      context: ./backend
+      dockerfile: ./build/Dockerfile
+    ports:
+      - "3000:3000"
+
+  frontend:
+    container_name: frontend
+    env_file:
+      - frontend/.env
+    build:
+      context: ./frontend
+      dockerfile: ./docker-build/Dockerfile
+    ports:
+      - "3031:3031"

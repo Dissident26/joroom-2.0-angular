@@ -1,0 +1,13 @@
+FROM node:19.7.0-bullseye-slim
+
+RUN npm install -g pnpm
+RUN npm install -g @nestjs/cli
+
+WORKDIR /app
+
+COPY ./package.json ./pnpm-lock.yaml /app/
+RUN pnpm install
+
+COPY . .
+
+ENTRYPOINT [ "pnpm", "dev", "--host", "0.0.0.0"]
