@@ -1,4 +1,4 @@
 export const environment = {
-    production: false,  
-    baseUrl: 'http://localhost:8080' //bind to .env var
-}
+  production: false,
+  baseUrl: 'http://localhost:8080', //bind to .env var
+};
