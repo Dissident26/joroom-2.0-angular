@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { UserListComponent } from '../components/user';
 
 export const paths = {
-  userList: '/user',
+  userList: 'user',
 };
 
 export const routes: Routes = [

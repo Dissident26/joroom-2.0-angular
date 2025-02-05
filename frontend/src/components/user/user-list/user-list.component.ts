@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
 
-import { UserPreviewComponent } from '..';
 import { UserService } from '../../../api';
 import { UserDto } from '../../../types';
 
 @Component({
   selector: 'app-user-list',
-  imports: [UserPreviewComponent, UserService],
+  imports: [NgFor],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
 })
 export class UserListComponent implements OnInit {
-  private userList: UserDto[];
+  IMAGE_SIZE = 50;
+  userList!: UserDto[];
 
   constructor(private userService: UserService) {}
 

@@ -1,1 +1,7 @@
-<p>user-list works!</p>
+<ul class="heroes">
+    <li class="container" *ngFor="let user of userList">
+        <img src={{user.imageUrl}} width={{IMAGE_SIZE}} height={{IMAGE_SIZE}} alt={{user.name}} />
+        <a href="">{{user.name}}</a>
+        <input type="checkbox" readOnly checked={{user.isActive}} />
+    </li>
+</ul>

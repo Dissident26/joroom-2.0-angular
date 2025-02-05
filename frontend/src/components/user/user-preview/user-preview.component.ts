@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-user-preview',
   imports: [],
   templateUrl: './user-preview.component.html',
-  styleUrl: './user-preview.component.scss'
+  styleUrl: './user-preview.component.scss',
 })
-export class UserPreviewComponent {
-
-}
+export class UserPreviewComponent {}
